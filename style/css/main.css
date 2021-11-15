@@ -1,7 +1,3 @@
-/*
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-*/
 *,
 *::before,
 *::after {
@@ -10,18 +6,19 @@
 }
 
 html {
-  font-size: 62.6%;
+  font-size: 64.5%;
   font-family: "Kumbh Sans", sans-serif;
 }
 
 body {
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
   min-height: 100vh;
   min-width: 100vw;
   background-image: linear-gradient(#af67e9, #6565e7);
-  z-index: 2;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 #img2 {
@@ -32,8 +29,8 @@ body {
   display: grid;
   grid-template-columns: 1fr 1fr;
   justify-items: start;
-  height: 60vh;
-  width: 70vw;
+  height: 50rem;
+  width: 90rem;
   background-color: white;
   background-image: url(../../images/bg-pattern-desktop.svg);
   border-radius: 2rem;
@@ -42,18 +39,18 @@ body {
 }
 
 .card_img {
-  height: 80%;
-  margin-top: calc((20vh - 2.45rem) / 2);
-  margin-left: -7rem;
+  height: 40rem;
+  margin-top: 4rem;
+  margin-left: -10rem;
   filter: drop-shadow(0 8rem 0 rgba(155, 155, 197, 0.247));
 }
 
 .card_box {
   position: absolute;
-  width: 13%;
-  z-index: 1;
+  width: 17rem;
+  margin-top: 19rem;
   margin-left: -8rem;
-  margin-top: calc((60vh - 1.73rem) / 2.5);
+  z-index: 2;
 }
 
 .card_content {
@@ -79,7 +76,6 @@ body {
   font-family: "Kumbh Sans", serif;
   font-size: 1.5rem;
   background-color: transparent;
-  cursor: pointer;
   padding: 2rem;
   width: 70%;
   text-align: left;
@@ -87,6 +83,11 @@ body {
   outline: none;
   transition: font-weight 0.4s ease-in-out;
   margin-left: 7rem;
+}
+
+.card_content__q_accordion:hover {
+  cursor: pointer;
+  color: #f47c57;
 }
 
 .card_content__q_accordion:after {
@@ -144,7 +145,7 @@ p {
   }
 }
 
-@media only screen and (max-width: 426px) {
+@media only screen and (max-width: 375px) {
   html {
     font-size: 5%;
   }

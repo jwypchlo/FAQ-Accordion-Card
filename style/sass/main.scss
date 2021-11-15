@@ -6,11 +6,6 @@ $text-light-greyish-blue: hsl(240, 6%, 50%);
 
 $icon-orange: hsl(14, 88%, 65%);
 
-/*
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-*/
-
 *,
 *::before,
 *::after {
@@ -19,21 +14,22 @@ $icon-orange: hsl(14, 88%, 65%);
 }
 
 html {
-  font-size: 62.6%;
+  font-size: 64.5%;
   font-family: "Kumbh Sans", sans-serif;
 }
 
 body {
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
   min-height: 100vh;
   min-width: 100vw;
   background-image: linear-gradient(
     $background-color-violet,
     $background-color-blue
   );
-  z-index: 2;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 #img2 {
@@ -41,11 +37,15 @@ body {
 }
 
 .card {
+  // position: absolute;
+  // top: 50%;
+  // left: 50%;
+  // transform: translate(-50%, -50%);
   display: grid;
   grid-template-columns: 1fr 1fr;
   justify-items: start;
-  height: 60vh;
-  width: 70vw;
+  height: 50rem;
+  width: 90rem;
   background-color: white;
   background-image: url(../../images/bg-pattern-desktop.svg);
   border-radius: 2rem;
@@ -53,18 +53,18 @@ body {
   background-position: right;
 
   &_img {
-    height: 80%;
-    margin-top: calc((20vh - 2.45rem) / 2);
-    margin-left: -7rem;
+    height: 40rem;
+    margin-top: 4rem;
+    margin-left: -10rem;
     filter: drop-shadow(0 8rem 0 hsla(240, 27%, 69%, 0.247));
   }
 
   &_box {
     position: absolute;
-    width: 13%;
-    z-index: 1;
+    width: 17rem;
+    margin-top: 19rem;
     margin-left: -8rem;
-    margin-top: calc((60vh - 1.73rem) / 2.5);
+    z-index: 2;
   }
 
   &_content {
@@ -90,7 +90,6 @@ body {
     font-family: "Kumbh Sans", serif;
     font-size: 1.5rem;
     background-color: transparent;
-    cursor: pointer;
     padding: 2rem;
     width: 70%;
     text-align: left;
@@ -99,13 +98,17 @@ body {
     transition: font-weight 0.4s ease-in-out;
     margin-left: 7rem;
 
+    &:hover {
+      cursor: pointer;
+      color: $icon-orange;
+    }
+
     &:after {
       content: "\032C";
       font-size: 2rem;
       font-weight: bold;
       color: $icon-orange;
       float: right;
-      // margin-left: 0.5rem;
       margin-top: -1.4rem;
     }
   }
@@ -163,7 +166,7 @@ p {
   }
 }
 
-@media only screen and (max-width: 426px) {
+@media only screen and (max-width: 375px) {
   html {
     font-size: 5%;
   }
